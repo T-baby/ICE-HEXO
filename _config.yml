@@ -1,0 +1,66 @@
+#来自作者的温馨提示：在填写设置的时候请注意要先空格，如 true不是true
+
+#导航
+name: BESD #网站名称
+logo: /img/logo.png  #logo图片，如果没放图片就显示网站名称
+site_url: http://besdlab.cn #网站地址
+menu: #导航栏上的菜单
+  Home: /
+  Archives: /archives
+rss: /atom.xml
+
+
+# Content
+excerpt: true
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+sidebar: right #侧边栏位置
+widgets:
+- text
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
+- links
+
+
+# Miscellaneous
+google_analytics:
+favicon: /img/favicon.png #设置图标
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
+
+#多说插件，第一个参数是短域名，第二个是是否开启评论功能
+duoshuo_shortname: 
+duoshuo_switch: true
+
+#移动设备的自适应增强
+adaptive: true
+
+#seo优化
+keywords: 我是关键词优化
+description: 我是描述优化
+
+#CDN地址
+cdn_url: http://cdn.besdlab.cn/
+
+#统计代码
+analytics:
+
+#百度分享功能
+share: true
+
+
+#主题增加的挂件设置
+#友情链接
+links: true
+links_url:
+  Home: /
+  Archives: /archives
+
+

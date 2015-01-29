@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+   <% if (theme.adaptive){ %>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+     <% } %>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = 'Archives';
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = 'Category: ' + page.category;
+  } else if (is_tag()){
+    title = 'Tag: ' + page.tag;
+  }
+  var keywords= theme.keywords +" "+page.title+" "+page.tag;
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <meta name="keywords" content="<%= keywords %>" />
+    <meta name="description" content="<%= theme.description %>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <!--引用ICSCSS-->
+  <link href="<%= theme.cdn_url + 'icecss/icecss.min.css' %>" rel="stylesheet" type="text/css">
+      <script src="<%= theme.cdn_url + 'jquery/2.1.1/jquery.2.1.1.min.js' %>"></script>
+      <script src="<%= theme.cdn_url + 'icecss/icecss.js' %>"></script>
+  <%- css('css/style') %>
+  <% if (theme.analytics){ %>
+<%- theme.analytics %>
+     <% } %>
+</head>

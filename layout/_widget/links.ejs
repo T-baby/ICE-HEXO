@@ -1,0 +1,12 @@
+<% if (theme.links){ %>
+  <div class="widget-wrap">
+    <h3 class="widget-title">LINKS</h3>
+    <div class="widget">
+    <ul>
+     <% for (var i in theme.links_url){ %>
+          <li><a href="<%- url_for(theme.links_url[i]) %>"><%= i %></a></li>
+        <% } %>
+        </ul>
+    </div>
+  </div>
+<% } %>

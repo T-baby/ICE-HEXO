@@ -1,0 +1,47 @@
+<style>
+.widget{
+  background: none; 
+ -webkit-box-shadow: none; 
+box-shadow: none;
+-webkit-border-radius:0px; 
+border-radius: 0px; 
+}
+  .ice-main-nav{
+    background: url("/img/ice-icon-menu.svg") no-repeat center center;
+  }
+ .ice-menu-logo a:hover{
+    background: none;
+  }
+
+      @media only screen and (min-width: 768px) {
+     .ice-main-nav {
+         width: auto;
+         height: auto;
+         background: none;
+         cursor: auto;
+     }
+   }
+</style>
+<header class="ice-menu ice-menu-hover">
+<div class="ice-menu-logo" style="font-family:'Microsoft YaHei'">
+ <% if (!theme.logo){ %>
+<a href="<%- theme.site_url%>"><%- theme.name%></a>
+     <% }else{%>
+     <a href="<%- theme.site_url %>"><img src="<%- theme.logo %>" style="height:100%"></a>
+     <style>
+       .ice-menu-logo{
+    background: none;
+  }</style>
+     <%}
+      %>
+
+</div>
+
+<nav class="ice-main-nav">
+<ul>
+<% for (var i in theme.menu){ %>
+          <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+        <% } %>
+</ul>
+</nav>
+</header> 
