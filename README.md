@@ -9,12 +9,8 @@ ICE-HEXO是一个基于[ICECSS](https://github.com/T-baby/ICECSS "ICECSS")和HEX
 **Install**
 
 ```
-$ git clone git@github.com:T-baby/ICE-HEXO.git themes/ice-hexo
+$ git clone https://github.com/T-baby/ICE-HEXO.git themes/ice-hexo
 ```
-
-## Browser Support
-- IE 8+
-- Latest Stable: Firefox, Chrome, Safari
 
 ## License
 MIT
