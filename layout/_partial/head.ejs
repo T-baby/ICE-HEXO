@@ -38,6 +38,10 @@
   <link href="<%= theme.cdn_url + 'icecss/icecss.min.css' %>" rel="stylesheet" type="text/css">
       <script src="<%= theme.cdn_url + 'jquery/2.1.1/jquery.2.1.1.min.js' %>"></script>
       <script src="<%= theme.cdn_url + 'icecss/icecss.js' %>"></script>
+      <script src="<%= theme.cdn_url + 'icecss/plugin/ice_click.js' %>"></script>
+      <script>
+      ice_click.init();
+      </script>
   <%- css('css/style') %>
   <% if (theme.analytics){ %>
 <%- theme.analytics %>
